@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+_notes/
+_static_site/
+venv/
+custom_bootstrap.css
+main.css
+custom_bootstrap.css.map
+main.css.map
+bootstrap.bundle.*
+site_meta.json
