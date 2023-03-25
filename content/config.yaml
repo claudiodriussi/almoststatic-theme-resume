@@ -1,0 +1,34 @@
+---
+config:
+  templates: ["templates", "../../flatstep/templates"]
+  static_url: "/"
+  cache: False
+
+meta:
+  author: "Claudio Driussi"
+  generator: "Almoststatic"
+
+site_name: Clarence Taylor
+slogan: An <a href="https://pypi.org/project/almoststatic/">Almoststatic</a> theme
+
+MainMenu:
+  - name: About
+    url: index#about
+
+  - name: Experience
+    url: index#experience
+
+  - name: Education
+    url: index#education
+
+  - name: Skills
+    url: index#skills
+
+  - name: Interests
+    url: index#interests
+
+  - name: Awards
+    url: index#awards
+
+  - name: Info...
+    url: info

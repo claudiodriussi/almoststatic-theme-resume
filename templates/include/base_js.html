@@ -1,0 +1,11 @@
+  <script src="{{get_media('js/vendor/jquery.smartmenus.js')}}" type="text/javascript"></script>
+  <script src="{{get_media('js/vendor/wow.js')}}" type="text/javascript"></script>
+  <script src="{{get_media('js/vendor/fslightbox.js')}}" type="text/javascript"></script>
+  <script src="{{get_media('js/smartmenus.almoststatic.js')}}" type="text/javascript"></script>
+  <script src="{{get_media('js/main.js')}}" type="text/javascript"></script>
+  <script src="{{get_media('js/scripts.js')}}" type="text/javascript"></script>
+  {% if page.script -%}
+  <script type="text/javascript">
+    {{page.script|safe}}
+  </script>
+  {% endif -%}

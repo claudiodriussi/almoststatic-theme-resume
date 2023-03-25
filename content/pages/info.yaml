@@ -1,0 +1,134 @@
+---
+title: Home page
+author: Claudio Driussi
+widgets_envelope: ['<div class="container">', "</div>"]
+
+content:
+  - type: divider
+    disabled: true
+    height: 300px
+
+  - type: text_html
+    id: about
+    text: |
+      # Welcome
+
+      Welcome to the theme derived from [Start Bootstrap resume theme](https://startbootstrap.com/theme/resume)
+      adapted for the  [Almoststatic](https://pypi.org/project/almoststatic/) static sites engine.
+
+      The [Home page]({{get_url(^^index^^)}}) has the html copied from the
+      original resume site.
+
+      But the theme is also derived form the [Flatstep theme](https://gitlab.com/almoststatic-themes/flatstep)
+      so it can use all his widgets.
+
+      Read the [tutorial](http://flatstep.claudiodriussi.it/tutorial.html) to know how to keep it working,
+      and how to derive your own themes.
+
+      **Here you can see some widget examples**
+
+  - type: divider
+    class: divider-left
+    title: Images and cards
+    text: |
+      Grid with background color, shadow, animation , image and embedded cards widgets.
+
+  - type: grid
+    id: grid
+    style: |
+      #widget_id {background-color: #bd5d38;}
+    class: shadow-right-10 wow animate__fadeIn
+    row_class: p-4
+    columns:
+      - column: 6
+        image: images/profile.jpg
+      - column: 6
+        text: "{{particle('cards3')}}"
+
+  - type: divider
+    class: divider-left
+    title: Form
+    text: |
+      Form within a grid, please **note that it didn't send mails**, see
+      documentation to know how to let it work.
+
+  - type: grid
+    disabled: false
+    id: widget
+    class: border-round-10 thin-border
+    columns:
+      - column: 1
+        class: text-center
+        text: '<i class="bi bi-envelope-open" style="font-size: 3rem"></i>'
+
+      - column: 11
+        text:
+          content:
+            - type: form
+              id: form
+              class: g-3
+              action: "#"
+              method: post
+              ajax: send_mail
+              input:
+                - type: html
+                  text: |
+                    ## Sens us an email
+
+                - type: text
+                  id: name
+                  column: 6
+                  label: Your name
+                  attr: required
+
+                - type: email
+                  id: email
+                  column: 6
+                  group_after: "@"
+                  label: Your email
+                  pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+                  attr: required
+
+                - type: textarea
+                  id: comment
+                  column: 12
+                  label: Notes
+
+                - type: submit
+                  id: submit
+                  column: 2
+                  class: btn btn-secondary
+                  value: Send
+
+particles:
+  - type: cards
+    id: cards3
+    columns: 2
+    class: p-0
+    gallery: true
+    cards:
+      - header: Dolore laborum
+        style: "background-color: floralwhite"
+        footer: '<div class="text-end"><a class="btn btn-outline-secondary" href="#">Got it</a></div>'
+        text: |
+          Enim ad aliquip sint exercitation culpa laborum laborum proident.
+
+      - header: Magna eiusmod
+        align: text-center
+        footer: '<div class="text-end"><a class="btn btn-outline-secondary" href="#">Got it</a></div>'
+        text: |
+          Magna eiusmod do ad consequat eiusmod commodo.
+
+      - header: Lorem pariatur
+        style: "background-color: honeydew"
+        align: text-end
+        footer: '<div class="text-end"><a class="btn btn-outline-secondary" href="#">Got it</a></div>'
+        text: |
+          Ullamco proident non commodo sint consequat Lorem pariatur qui adipisicing commodo.
+
+      - header: Magna eiusmod
+        style: "background-color: aliceblue"
+        align: text-center
+        footer: '<div class="text-end"><a class="btn btn-outline-secondary" href="#">Got it</a></div>'
+        text: |
+          Magna eiusmod do ad consequat eiusmod commodo.

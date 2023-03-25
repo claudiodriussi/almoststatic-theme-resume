@@ -1,0 +1,27 @@
+@import "./variables.scss";
+
+$accent: orange;
+$yellow: #d47500 !default;
+$warning: $yellow !default;
+
+@import "../../../../flatstep/content/scss/theme/widgets.scss";
+
+// body {
+//   min-height: 75rem;
+//   // adjust according to navbar height
+//   padding-top: 3.5em;
+//   padding-bottom: 20px;
+//   font-family: Arial, Helvetica, sans-serif;
+// }
+
+.blog-content {
+  padding: 6px;
+  background-color: #f7f7ef;
+  margin: 20px 0px 20px 0px;
+}
+
+.blog-aside {
+  padding: 6px;
+  background-color: #eef6f6;
+  margin: 20px 0px 20px 0px;
+}

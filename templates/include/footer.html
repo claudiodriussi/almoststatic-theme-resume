@@ -1,0 +1,12 @@
+{% if page %}
+<footer class="footer">
+  <div class="container-fluid bg-light" style="min-height: 120px;">
+     <hr>
+     <div class="container">
+       <span class="text-muted"> <i>{{slogan}}</i> </span>
+       <span>Derived from <a href="https://startbootstrap.com/theme/resume">Start Bootstrap resume theme</a></span>
+       <p>Page last updated on {{ page.date.strftime('%Y-%m-%d') }}</p>
+     </div>
+  </div>
+</footer>
+{% endif %}
