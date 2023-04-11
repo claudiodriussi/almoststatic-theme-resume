@@ -9,3 +9,4 @@ custom_bootstrap.css.map
 main.css.map
 bootstrap.bundle.*
 site_meta.json
+publish.sh
